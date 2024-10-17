@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  # Conteneur HTTP avec NGINX
+  http:
+    image: nginx:latest
+    container_name: HTTP
+    ports:
+      - "8080:80"
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf # Config NGINX
+      - ./src:/app # Fichiers source
+    depends_on:
+      - script
+    networks:
+      - webnet
+
+  # Conteneur PHP avec PHP-FPM
+  script:
+    image: php:7.4-fpm
+    container_name: SCRIPT
+    volumes:
+      - ./src:/app # Fichiers source
+    depends_on:
+      - data
+    networks:
+      - webnet
+
+  # Conteneur MariaDB
+  data:
+    image: mariadb:latest
+    container_name: DATA
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpassword
+    volumes:
+      - ./db_data:/var/lib/mysql
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
