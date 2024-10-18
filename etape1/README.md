@@ -38,3 +38,4 @@ docker-compose up -d
 
 3. Ouvrez un navigateur et accédez à `http://localhost:8080` pour voir la page PHP avec `phpinfo()`.
 
+![Image de l'étape 1](home\auce\docker-tp2\etape1/etape1.png)
