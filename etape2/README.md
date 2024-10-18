@@ -2,6 +2,8 @@
 
 ## Description
 
+Pour réaliser l'étape 2 de votre projet, nous allons créer trois conteneurs Docker : un conteneur HTTP avec NGINX, un conteneur PHP avec PHP-FPM, et un conteneur de base de données avec MariaDB. Nous allons également créer une page test_bdd.php qui exécutera des requêtes CRUD.
+
 Cette étape consiste à configurer un environnement Docker avec trois conteneurs :
 - **HTTP** : Un conteneur Nginx servant des fichiers PHP.
 - **SCRIPT** : Un conteneur PHP-FPM pour l'exécution des scripts PHP.
