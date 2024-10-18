@@ -25,7 +25,7 @@ Créer 3 conteneurs :
 ### Instructions
 Créez une page test_bdd.php qui, lorsqu'elle est appelée, va exécuter 2 requêtes CRUD (Request : lecture, Create Update Delete : écriture) au minimum sur le serveur SQL : 1 lecture et 1 écriture.
 
-###Test de validité
+### Test de validité
 Avec un navigateur, accédez à http://localhost:8080/test_bdd.php pour voir le résultat de l'exécution de la page, retournant un résultat différent et dépendant du contenu de la base de données à chaque rafraîchissement de la page.
 
 ## Étape 3
