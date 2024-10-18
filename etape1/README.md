@@ -28,6 +28,7 @@ Voici la structure des répertoires du projet :
 
 1. Clonez ce repository :
 git clone https://github.com/ton-compte/docker-tp2.git
+
 cd docker-tp2/etape1
 
 
